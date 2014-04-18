@@ -1,6 +1,11 @@
 Instructions
 ============
 
-1. Install ruby-processing, along with jruby-complete (follow ruby-processing installation instructions).
-2. Install `rpbundle`
-3. Run `rpbundle exec run sketch.rb`
+1. `gem install ruby-processing`
+2. `install_jruby_complete`
+3. `gem install rpbundle`
+4. `rpbundle setup`
+5. `rpbundle install`
+6. `rpbundle exec run sketch.rb`
+
+** Steps 1-5 need to be executed only once **
