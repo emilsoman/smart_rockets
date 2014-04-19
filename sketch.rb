@@ -1,6 +1,7 @@
 def setup
   size(1000, 600)
   @size = 30
+  @location = [width/2, height]
 end
 
 def draw
@@ -10,7 +11,8 @@ def draw
   stroke_weight(1)
   push_matrix
 
-  translate(width/2, height/2)
+  @location[1] -= 1
+  translate(@location[0], @location[1])
 
   # Thrusters
   rect_mode(CENTER)
