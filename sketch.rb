@@ -1,7 +1,7 @@
 def setup
   size(1000, 600)
   @size = 30
-  @location = [width/2, height]
+  @location = PVector.new(width/2, height)
 end
 
 def draw
@@ -11,8 +11,8 @@ def draw
   stroke_weight(1)
   push_matrix
 
-  @location[1] -= 1
-  translate(@location[0], @location[1])
+  @location.y -= 1
+  translate(@location.x, @location.y)
 
   # Thrusters
   rect_mode(CENTER)
