@@ -14,7 +14,7 @@ def setup
   control_panel do |c|
     c.slider :speed, 1..100
     c.slider(:mutation_rate, 0..1, $mutation_rate) {|s| $mutation_rate = s}
-    c.menu(:gene_crossover_strategy, ['random_sample', 'random_midpoint'], $crossover_strategy) {|m| $crossover_strategy = m }
+    c.menu(:gene_crossover_strategy, ['human_like', 'random_sample', 'random_midpoint'], $crossover_strategy) {|m| $crossover_strategy = m }
     c.checkbox(:show_obstacles)
     @panel = c
   end

@@ -38,6 +38,10 @@ class Dna
         gene = (index < random_midpoint) ? @genes[index] : other_dna.genes[index]
         selected_genes << gene
       end
+    elsif $crossover_strategy == 'human_like'
+      @genes.each_with_index do |gene, index|
+        selected_genes << [ gene, other_dna.genes[index] ].sample
+      end
     elsif $crossover_strategy == 'random_sample'
       gene_pool = @genes + other_dna.genes
       selected_genes = gene_pool.sample(@genes.size)
